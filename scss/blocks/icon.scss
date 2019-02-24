@@ -18,6 +18,7 @@ $signin-icon: $icons-path + "/sign_in.svg";
 $useredit-icon: $icons-path + "/user_edit.svg";
 $users-icon: $icons-path + "/users.svg";
 $vk-icon: $icons-path + "/vk.svg";
+$crown-icon: $icons-path + "/crown.svg";
 
 $icon-size: 14px, 14px;
 $icon-sizes: (small: (12px, 12px),
@@ -134,6 +135,9 @@ $icon-bg-sizes: (large: (24px, 24px),
         }
         &_delete {
             @include mask-image($delete-icon);
+        }
+        &_crown{
+            @include mask-image($crown-icon);
         }
         &_ru {
             background-image: url($ru-png);
