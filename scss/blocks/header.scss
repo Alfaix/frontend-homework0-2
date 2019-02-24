@@ -1,7 +1,9 @@
-@import "../modules/theme";
+@import "../modules/variables";
 
 .header {
   display: flex;
+  align-self: stretch;
+  justify-self: flex-start;
   align-items: center;
 
   height: 50px;

@@ -14,3 +14,4 @@ node_modules
 .DS_Store
 
 scss/compiled
+public/css

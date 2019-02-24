@@ -1,7 +1,7 @@
 @import "../modules/mixins";
 
-@mixin btn-color($bg, $color, $bg-hover: darker($bg), $color-hover: $color,
-                 $bg-active: darker(darker($bg)), $color-active: $color, $block) {
+@mixin btn-color($block, $bg, $color, $bg-hover: darker($bg), $color-hover: $color,
+                 $bg-active: darker(darker($bg)), $color-active: $color) {
   // TLDR: set animations (0.5 for hover, 0.2 for click), and colors to those given
   // default: bg gets darker, text color doesn't change. Icon is treated like text.
   // btn_disabled is not reactive
@@ -63,7 +63,7 @@
   border-radius: 3px;
 
   @include shadow(0 2px $outline-color);
-  @include btn-color($main-color, white, $block: $block);
+  @include btn-color($block, $main-color, white);
   cursor: pointer;
   font-weight: bold;
 
@@ -88,10 +88,9 @@
 
   &_color_muted {
     border-color: $border-color;
-    @include btn-color ($muted-color-light, $muted-color-dark,
+    @include btn-color ($block, $muted-color-light, $muted-color-dark,
                         $color-hover: darker($muted-color-dark),
-                        $color-active: darker(darker($muted-color-dark)),
-                        $block: $block);
+                        $color-active: darker(darker($muted-color-dark)));
   }
 
   &_disabled {

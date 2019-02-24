@@ -58,6 +58,9 @@
       #{$block}__item:nth-of-type(even) {
         background-color: whitesmoke;
       }
+      #{$block}__item:nth-of-type(odd) {
+        background-color: white;
+      }
     }
   }
 

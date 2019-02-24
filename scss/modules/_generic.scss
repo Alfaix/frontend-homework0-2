@@ -1,8 +1,21 @@
 html, body {
     margin: 0;
+    height: 100%;
     width: 100%;
     font-family: $font-stack;
-    background-color: white;
+    background-color: $body-color;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_color {
+        &_dark {
+            background-color: $body-color-dark;
+        }
+    }
 }
 
 a {
